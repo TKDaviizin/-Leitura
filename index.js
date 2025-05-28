@@ -1,4 +1,3 @@
-function hello{}{
-  console.log("Hello, World!");
+function oie() {
+  console.log("OIE");
 }
-const pessoa_nome = "Davi ";
