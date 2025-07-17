@@ -6,7 +6,8 @@
   "scripts": {
     "linter": "prettier --check .",
     "linter:fix": "prettier --write .",
-    "test":"jest"
+    "test":"jest",
+    "test:watch":"jest --watch"
 
   },
   "author": "Davi Santos Meira",
