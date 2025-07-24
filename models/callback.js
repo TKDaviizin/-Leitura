@@ -1,6 +1,9 @@
 
-const fs = require('node.fs')
+const fs = require('node:fs')
 
-fs.readfile("./arq1", function(erro, resposta){
-  
+fs.readFile("./arq1.txt", function(erro, resposta){
+  console.log("error", erro);
+  console.log("resposta", resposta.toString());
 })
+
+console.log("FIM");
