@@ -1,29 +1,26 @@
-const readFile = require("node:readline");
-const terminal = readFile.createInterface({
-  input:process.stdin,
-  output: process.stdin,
+const readfile = require("node:readline");
+const terminal = readfile.createInterface({
+  input: process.stdin,
+  output: process.stdout,
 });
-
-// terminal.question("qual seu nome: \n",ction (valor){
-//   console.log("seja bem vindo" + valor);function (valor){
-//   console.log("seja bem vindo" + valor);
-// });
 
 function question(pergunta) {
-  return new Promise(function (resolve, reject){
-    terminal.question(pergunta,function(valor){
-      resolve(valor)
+  const promessa = new Promise(function (resolve, reject) {
+    terminal.question(pergunta, function (valor) {
+      resolve(valor);
     });
   });
-  return promrssa;
+  return promessa;
 }
-question("qual seu nome? \n")
-  .then(function(nome){
-  console.log("nome:" + nome); 
-})
-catch(function (erro){
-  console.log("deu error " + error);
-})
-.finally(function (){
-  terminal.close();
-});
+
+question("Qual seu nome? \n")
+  .then(function (nome) {
+    console.log("Nome: " + nome);
+  })
+  .catch(function (error) {
+    console.log("Deu error " + error);
+  })
+  .finally(function () {
+    terminal.close();
+  });
+
